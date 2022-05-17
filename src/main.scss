@@ -1,0 +1,113 @@
+table, th, td {
+  border: 1px solid black;
+}
+
+.main {
+  display : grid;
+  grid-template-columns: auto auto ;
+  grid-gap: 10px;
+}
+.grid-item {
+  grid-column: 1 / 3;
+}
+#character {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#character td, #character th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#character tr:nth-child(even){background-color: #f2f2f2;}
+
+#character tr:hover {background-color: #ddd;}
+
+#character th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  
+  height: 40px;
+}
+button {
+  font-family: 'Muli', sans-serif;
+  -webkit-transition: 0.15s all ease-in-out;
+  -o-transition: 0.15s all ease-in-out;
+  transition: 0.15s all ease-in-out;
+  cursor: pointer; 
+ }
+
+ .curve {
+  background: #0069eb;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  text-decoration: none; }
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+.card_content {
+  padding: 10px 10px;
+}
